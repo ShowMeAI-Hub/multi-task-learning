@@ -109,7 +109,7 @@ _说明_
 
 采用uAUC作为单个行为预测结果的评估指标，uAUC定义为不同用户下AUC的平均值，计算公式如下：
 
-![](http://image.showmeai.tech/multitask-learning/uAUC.png)
+<center><img src="http://image.showmeai.tech/multitask-learning/uAUC.png" width="50%"/><center/>
 
 其中，n为测试集中的有效用户数，有效用户指的是对于某个待预测的行为，过滤掉测试集中全是正样本或全是负样本的用户后剩下的用户。AUCi为第i个有效用户的预测结果的AUC（Area Under Curve）。
 
@@ -129,7 +129,7 @@ _说明_
 
 加权uAUC的计算公式如下:
 
-![](http://image.showmeai.tech/multitask-learning/uAUC-w.png)
+<center><img src="http://image.showmeai.tech/multitask-learning/uAUC-w.png" width="50%"/><center/>
 
 其中，k为待预测的互动行为数，初赛k=4，复赛k=7。 uAUCi为第i个行为的uAUC值， Wi为第i个行为的权重。
 
@@ -162,3 +162,5 @@ MMoE通过『化整为零』，把一个共享参数矩阵化成多个结合gate
 ![](http://image.showmeai.tech/multitask-learning/PLE.png)
 
 ## 代码说明
+
+代码由几个Jupyter Notebook构成，其中`data-preprocessing-and-feature-engineering`包含数据预处理与特征工程步骤，运行完成之后，可以依次运行后续的不同结构模型进行建模。
